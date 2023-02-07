@@ -1,0 +1,23 @@
+version: '3.7'
+
+services:
+
+  nuxt:
+    container_name: nuxtjs
+    build: ./app/
+    restart: always
+    ports:
+      - ${APP_PORT}:${APP_PORT}
+    command: sh -c "npm run dev -- -o"
+
+  nginx:
+    container_name: nginx
+    image: nginx
+    restart: always
+    ports:
+      - ${WEB_PORT}:${WEB_PORT}
+      - ${WEB_PORTS}:${WEB_PORTS}
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+    depends_on:
+      - nuxt
