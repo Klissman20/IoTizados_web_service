@@ -3,12 +3,12 @@ version: '3.7'
 services:
 
   nuxt:
-    container_name: nuxtjs
-    build: ./app/
+    container_name: nuxt
+    build: ./app
     restart: always
     ports:
-      - ${APP_PORT}:${APP_PORT}
-    command: sh -c "npm run dev -- -o"
+      - 3000:3000
+    command: sh -c "npm run dev"
 
   nginx:
     container_name: nginx
