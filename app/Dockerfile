@@ -6,7 +6,7 @@ RUN apt-get update
 WORKDIR /home/nuxt
 COPY . /home/nuxt
 
-RUN git clone 
+RUN git clone https://github.com/Klissman20/static_web.git
 RUN npm install
 
 ENV HOST 0.0.0.0
