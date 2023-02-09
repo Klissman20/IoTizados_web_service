@@ -1,4 +1,5 @@
 FROM node:16
+RUN apt-get update
 RUN apt-get install git
 WORKDIR /app
 RUN git clone https://github.com/Klissman20/static_web.git
