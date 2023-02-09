@@ -7,7 +7,7 @@ services:
     build: ./app
     restart: always
     ports:
-      - 3000:3000
+      - 3005:3005
     command: sh -c "npm run dev"
 
   nginx:
