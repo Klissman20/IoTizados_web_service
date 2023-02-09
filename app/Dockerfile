@@ -7,7 +7,7 @@ WORKDIR /app
 
 RUN git clone https://github.com/Klissman20/static_web.git
 
-RUN cd static_web/static_web
+RUN cd static_web/static_web/
 RUN ls
 RUN npm install
 
