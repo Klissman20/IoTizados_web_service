@@ -7,17 +7,17 @@ services:
     build: ./app
     restart: always
     ports:
-      - 3005:3005
+      - 80:3005
     command: sh -c "npm run dev"
 
-  nginx:
-    container_name: nginx
-    image: nginx
-    restart: always
-    ports:
-      - 80:80
-      - 443:443
-    volumes:
-      - ./nginx:/etc/nginx/conf.d
-    depends_on:
-      - nuxt
+  #nginx:
+  #  container_name: nginx
+  #  image: nginx
+  #  restart: always
+  #  ports:
+  #    - 80:80
+  #    - 443:443
+  # volumes:
+  #    - ./nginx:/etc/nginx/conf.d
+  #  depends_on:
+  #    - nuxt
